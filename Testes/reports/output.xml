@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.9.0 on linux)" generated="20220318 16:16:53.562" rpa="false" schemaversion="2">
+<suite id="s1" name="Tests" source="/opt/robotframework/tests">
+<suite id="s1-s1" name="TestCase" source="/opt/robotframework/tests/TestCase.robot">
+<test id="s1-s1-t1" name="testInputBox">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>open browser</arg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220318 16:16:53.940" level="INFO">Opening browser 'chrome' to base url 'https://demo.nopcommerce.com/'.</msg>
+<status status="PASS" starttime="20220318 16:16:53.939" endtime="20220318 16:16:57.816"/>
+</kw>
+<status status="PASS" starttime="20220318 16:16:53.938" endtime="20220318 16:16:57.816"/>
+</kw>
+<kw name="testInputBox">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220318 16:16:57.821" endtime="20220318 16:16:58.022"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>nopCommerce demo store</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220318 16:16:58.049" level="INFO">Page title is 'nopCommerce demo store'.</msg>
+<status status="PASS" starttime="20220318 16:16:58.023" endtime="20220318 16:16:58.050"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://a[@class='ico-login']</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20220318 16:16:58.051" level="INFO">Clicking link 'xpath://a[@class='ico-login']'.</msg>
+<status status="PASS" starttime="20220318 16:16:58.050" endtime="20220318 16:16:58.819"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${"email_txt"}</var>
+<arg>id:Email</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220318 16:16:58.820" level="INFO">${"email_txt"} = id:Email</msg>
+<status status="PASS" starttime="20220318 16:16:58.819" endtime="20220318 16:16:58.820"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${"email_txt"}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220318 16:16:58.871" level="INFO">Element 'id:Email' is displayed.</msg>
+<status status="PASS" starttime="20220318 16:16:58.820" endtime="20220318 16:16:58.871"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>${"email_txt"}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220318 16:16:58.871" endtime="20220318 16:16:58.916"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${"email_txt"}</arg>
+<arg>JohnDavid@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220318 16:16:58.917" level="INFO">Typing text 'JohnDavid@gmail.com' into text field 'id:Email'.</msg>
+<status status="PASS" starttime="20220318 16:16:58.916" endtime="20220318 16:16:59.065"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220318 16:17:01.066" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220318 16:16:59.065" endtime="20220318 16:17:01.066"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${"email_txt"}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220318 16:17:01.066" endtime="20220318 16:17:01.113"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220318 16:17:02.114" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220318 16:17:01.113" endtime="20220318 16:17:02.114"/>
+</kw>
+<status status="PASS" starttime="20220318 16:16:57.819" endtime="20220318 16:17:02.114"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220318 16:17:02.114" endtime="20220318 16:17:02.201"/>
+</kw>
+<status status="PASS" starttime="20220318 16:16:53.936" endtime="20220318 16:17:02.202"/>
+</test>
+<test id="s1-s1-t2" name="LoginTest">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>open browser</arg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220318 16:17:02.210" level="INFO">Opening browser 'chrome' to base url 'https://demo.nopcommerce.com/'.</msg>
+<status status="PASS" starttime="20220318 16:17:02.210" endtime="20220318 16:17:05.461"/>
+</kw>
+<status status="PASS" starttime="20220318 16:17:02.209" endtime="20220318 16:17:05.462"/>
+</kw>
+<kw name="loginToApp">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://a[@class='ico-login']</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20220318 16:17:05.464" level="INFO">Clicking link 'xpath://a[@class='ico-login']'.</msg>
+<status status="PASS" starttime="20220318 16:17:05.463" endtime="20220318 16:17:06.230"/>
+</kw>
+<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
+<arg>xpath://div[@class='message-error validation-summary-errors']</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<msg timestamp="20220318 16:17:06.250" level="INFO">Element 'xpath://div[@class='message-error validation-summary-errors']' did not exist.</msg>
+<status status="PASS" starttime="20220318 16:17:06.230" endtime="20220318 16:17:06.250"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:Email</arg>
+<arg>pavanotraining@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220318 16:17:06.251" level="INFO">Typing text 'pavanotraining@gmail.com' into text field 'id:Email'.</msg>
+<status status="PASS" starttime="20220318 16:17:06.251" endtime="20220318 16:17:06.404"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:Password</arg>
+<arg>Test@123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220318 16:17:06.404" level="INFO">Typing text 'Test@123' into text field 'id:Password'.</msg>
+<status status="PASS" starttime="20220318 16:17:06.404" endtime="20220318 16:17:06.539"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://button[@class='button-1 login-button']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220318 16:17:06.539" level="INFO">Clicking element 'xpath://button[@class='button-1 login-button']'.</msg>
+<status status="PASS" starttime="20220318 16:17:06.539" endtime="20220318 16:17:06.611"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220318 16:17:08.612" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220318 16:17:06.612" endtime="20220318 16:17:08.612"/>
+</kw>
+<status status="PASS" starttime="20220318 16:17:05.462" endtime="20220318 16:17:08.612"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220318 16:17:08.613" endtime="20220318 16:17:08.725"/>
+</kw>
+<status status="PASS" starttime="20220318 16:17:02.205" endtime="20220318 16:17:08.725"/>
+</test>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220318 16:17:08.727" endtime="20220318 16:17:08.728"/>
+</kw>
+<status status="PASS" starttime="20220318 16:16:53.609" endtime="20220318 16:17:08.728"/>
+</suite>
+<suite id="s1-s2" name="TestTestingApp" source="/opt/robotframework/tests/TestTestingApp.robot">
+<test id="s1-s2-t1" name="IsOnline">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>open browser</arg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220318 16:17:08.747" level="INFO">Opening browser 'chrome' to base url 'http://nodeJS:3000'.</msg>
+<status status="PASS" starttime="20220318 16:17:08.746" endtime="20220318 16:17:10.374"/>
+</kw>
+<status status="PASS" starttime="20220318 16:17:08.746" endtime="20220318 16:17:10.375"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath://pre</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220318 16:17:10.426" level="INFO">Element 'xpath://pre' is displayed.</msg>
+<status status="PASS" starttime="20220318 16:17:10.376" endtime="20220318 16:17:10.426"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220318 16:17:10.426" endtime="20220318 16:17:10.486"/>
+</kw>
+<status status="PASS" starttime="20220318 16:17:08.744" endtime="20220318 16:17:10.487"/>
+</test>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220318 16:17:10.489" endtime="20220318 16:17:10.489"/>
+</kw>
+<status status="PASS" starttime="20220318 16:17:08.733" endtime="20220318 16:17:10.489"/>
+</suite>
+<status status="PASS" starttime="20220318 16:16:53.565" endtime="20220318 16:17:10.494"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1" name="TestCase">Tests.TestCase</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="TestTestingApp">Tests.TestTestingApp</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
