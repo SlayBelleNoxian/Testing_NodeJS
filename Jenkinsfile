@@ -4,6 +4,7 @@ pipeline{
 	stages{
 		stage("build"){
 			steps{
+				curl --user "$JENKINS_USERNAME:$JENKINS_SECRET" -X POST -F "jenkinsfile=<$jenkinsfile" "$JENKINS_URL/pipeline-model-converter/validate"
 				docker network create testing-net;
 				docker build %WORKSPACE%/Nodedocker -t testing-app;
 				echo "Starting node!";
