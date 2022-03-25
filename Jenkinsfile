@@ -13,7 +13,7 @@ pipeline{
 		stage("test"){
 			steps{
 				echo "Testing app!!";
-				bash %WORKSPACE%/Testes/Script.sh
+				bash %WORKSPACE%/Testes/Script.sh;
 			}
 		}
 		stage("deploy"){
