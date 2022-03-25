@@ -10,7 +10,7 @@ pipeline{
 				docker run --rm --net testing-net --name nodeJS -p 3000:3000 testing-app;
 			}
 		}
-		stage("test"){
+		/*stage("test"){
 			steps{
 				echo "Testing app!!";
 			}
@@ -20,6 +20,6 @@ pipeline{
 				echo "Stopping containers!";
 				docker stop nodeJS;
 			}
-		}
+		}*/
 	}
 }
