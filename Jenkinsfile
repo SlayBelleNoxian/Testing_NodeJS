@@ -13,7 +13,7 @@ pipeline{
 		stage("test"){
 			steps{
 				echo "Testing app!!"
-				docker run --rm --net testing-net -v ${PWD}/Testes/reports:/opt/robotframework/reports:Z -v ${PWD}/Testes/test:/opt/robotframework/tests:Z -e BROWSER=chrome ppodgorsek/robot-framework:latest
+				docker run --rm --net testing-net -v ./Testes/reports:/opt/robotframework/reports:Z -v ./Testes/test:/opt/robotframework/tests:Z -e BROWSER=chrome ppodgorsek/robot-framework:latest
 			}
 		}
 		stage("deploy"){
